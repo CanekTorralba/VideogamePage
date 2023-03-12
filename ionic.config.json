@@ -1,0 +1,7 @@
+{
+  "name": "GamePage",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
