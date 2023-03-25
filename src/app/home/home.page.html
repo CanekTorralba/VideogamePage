@@ -1,20 +1,93 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- Logo of the game -->
+    <ion-avatar slot="start">
+      <ion-img src="assets\images\Game_Logo.PNG"></ion-img>
+    </ion-avatar>
+    <!-- Title of the game -->
     <ion-title>
-      Blank
+      Toy Rampage
     </ion-title>
+    <!-- <ion-button>PLAY ME!</ion-button> -->
+    <ion-buttons slot="end">
+      <ion-button bgcolor="secondary">
+        <b>PLAY ME!</b>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="background-div">
   </div>
+
+  <div class="container">
+    <!-- Story of the game -->
+    <div class="column">
+      <p>After the lovely family dog ceased to be, the parents of the mournful child  endeavored to bring little Buddy back to the mortal plane. Using ancient arcane sorcery on a thunder night, the couple sprang into action to break down the barriers between life and death.
+      At the beginning, the taboo ritual went as planned, and it would have gone as well, if not for a intruding fly; only the small flapping of wings, and a sneeze as loud as thunder, were enough to break the containment of the spell.
+      The canine remained in its box, but other tenants gave their first steps that night.
+      In his great wisdom, the patriarch of the family decided to get every person at home to a cabin, until he finds how to revert the unintended craft, or the effect wears off - whatever happens first.
+      With no authority at home, the new residents have zero restraints for experiencing their newly given vitality.
+      Some of them form clans, some of them became loners. But one thing is for sure: when factions come to rise, conflict becomes inevitable. The once cozy household became the battleground for miniature guerrillas; and those pricks are pretty resourceful with their weapons.
+      No Act GuyTM stayed with their arms crossed.
+      No  Fashion LassTM remained in one place.
+      The forgotten ones wanted payback for their long slumber, and blamed the favorites for their ill fate.
+      This  is the dawn of a new type of conflict, to call it a war is misleading: this is a Toy Rampage.</p>
+    </div>
+    <div class="column">
+      <img src="assets\images\Grave_Image.PNG" alt="Grave image">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Story of the game -->
+    <div class="column">
+      <h2>Arm up and play!</h2>
+      <h3>Armed conflict has never seen a scale like this, and the participants are not capable of picking up a traditional weapon.
+        These little warriors, using their meager resources and ingenuity, manage to battle.
+        Tour the family home and destroy your enemies. Shoot first, shoot later.</h3>
+    </div>
+    <div class="column">
+      <img src="assets\images\Grave_Image.PNG" alt="Gameplay shoot">
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Story of the game -->
+    <div class="column">
+      <h2>The name of the game is BATTLE!</h2>
+      <ion-button>Download the User Manual</ion-button>
+    </div>
+    <div class="column">
+      <!-- Technical manual -->
+      <h2>Discover the inner workings of this world!</h2>
+      <ion-button>Download the Tech Manual</ion-button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Tell us what you think from 1 to 10</h1>
+  </div>
+
+  <ion-footer >
+    <ion-toolbar color="secondary">
+      <ion-row>
+        <ion-col size="2">
+          <!-- Logo of the game -->
+          <img src="assets\images\UTCH_Logo.png" alt="Logo">
+        </ion-col>
+        <ion-col size="5">
+          <!-- Second column content goes here -->
+          <p>Angel Carballo Macias</p>
+          <p> Cesar Erives Chavez</p>
+          <p>Canek Eleazar Torralba Ruiz</p>
+        </ion-col>
+        <ion-col size="5">
+          <h1>Group: IDGSBIS101N</h1>
+          <h4>Tutor: Proffesor Roberto Aguirre Rodriguez</h4>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>
