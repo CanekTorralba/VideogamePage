@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'review',
+    loadChildren: () => import('./review/review.module').then( m => m.ReviewPageModule)
+  },
 ];
 
 @NgModule({
