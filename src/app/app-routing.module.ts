@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomePage } from './home/home.page';
+import { ReviewPage } from './review/review.page';
 
 const routes: Routes = [
   {
@@ -13,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'review',
-    loadChildren: () => import('./review/review.module').then( m => m.ReviewPageModule)
+    loadChildren: () => import('./review/review.module').then( m => m.ReviewPageModule),
+    component: ReviewPage
   },
 ];
 

@@ -1,0 +1,58 @@
+ion-content {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0px;
+    --background: linear-gradient(to bottom, #097973, #103479, #3a045e);
+}
+
+
+.background-div {
+    height: 100%;
+    background-image: url('../../assets/images/Game_Cover.PNG');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.column {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+  
+.levelImage{
+    height: 300px;
+    width: 460px;
+}
+  
+.division {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: center;
+}
+  
+ion-footer {
+    padding: 0;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+  
+ion-footer img {
+    height: 80px;
+    width: 160px;
+    object-fit: contain;
+}
