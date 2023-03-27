@@ -21,56 +21,28 @@
   <h1>Score our work from 1 to 10 to know how we can improve</h1>
   <ion-list>
     <ion-item>
-      <!-- Gameplay -->
-      <ion-label position="floating">Gameplay</ion-label>
-      <ion-input type="number" min="1" max="10" required></ion-input>
+      <ion-label position="floating">Team ID</ion-label>
+      <ion-input type="text" [(ngModel)]="teamId"></ion-input>
     </ion-item>
+
     <ion-item>
-      <!-- Music -->
-      <ion-label position="floating">Music</ion-label>
-      <ion-input type="number" min="1" max="10" required></ion-input>
+      <ion-label position="floating">Score</ion-label>
+      <ion-input type="number" min="0" max="10" [(ngModel)]="score"></ion-input>
     </ion-item>
+
     <ion-item>
-      <!-- Design -->
-      <ion-label position="floating">Design</ion-label>
-      <ion-input type="number" min="1" max="10" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <!-- Story -->
-      <ion-label position="floating">Story</ion-label>
-      <ion-input type="number" min="1" max="10" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <!-- Difficulty -->
-      <ion-label position="floating">Difficulty</ion-label>
-      <ion-input type="number" min="1" max="10" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <!-- Difficulty -->
-      <ion-label position="floating">Extra Comments</ion-label>
-      <ion-textarea></ion-textarea>
+      <ion-label position="floating">Comment</ion-label>
+      <ion-textarea [(ngModel)]="comment"></ion-textarea>
     </ion-item>
   </ion-list>
-  <ion-button expand="block">Submit</ion-button>
 
-  <ion-footer >
-    <ion-toolbar color="secondary">
-      <ion-row>
-        <ion-col size="2">
-          <!-- Logo of the game -->
-          <img src="assets\images\UTCH_Logo.png" alt="Logo">
-        </ion-col>
-        <ion-col size="5">
-          <!-- Second column content goes here -->
-          <p>Angel Carballo Macias</p>
-          <p> Cesar Erives Chavez</p>
-          <p>Canek Eleazar Torralba Ruiz</p>
-        </ion-col>
-        <ion-col size="5">
-          <h1>Group: IDGSBIS101N</h1>
-          <h4>Tutor: Proffesor Roberto Aguirre Rodriguez</h4>
-        </ion-col>
-      </ion-row>
-    </ion-toolbar>
-  </ion-footer>
+  <ion-button expand="block" (click)="saveReview()">Save Review</ion-button>
+
+  <ion-list *ngIf="reviews.length > 0">
+    <ion-item *ngFor="let review of reviews">
+      <ion-label>{{ review.teamId }} - {{ review.score }}</ion-label>
+      <ion-note slot="end">{{ review.comment }}</ion-note>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
