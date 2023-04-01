@@ -7,7 +7,7 @@ import { Storage } from '@ionic/storage-angular';
   styleUrls: ['./review.page.scss'],
 })
 export class ReviewPage {
-  teamId: string = '';
+  username: string = '';
   score: number = 0;
   comment: string = '';
   reviews: any[] = [];
@@ -28,7 +28,7 @@ export class ReviewPage {
   saveReview() {
     console.log('Saving review');
     const review = {
-      teamId: this.teamId,
+      username: this.username,
       score: this.score,
       comment: this.comment || '' // make comment an empty string if it's undefined
     };
@@ -44,7 +44,7 @@ export class ReviewPage {
       console.log('Saved reviews:', savedReviews);
       this.storage.set('reviews', JSON.stringify(savedReviews)).then(() => {
         this.reviews.push(review);
-        this.teamId = '';
+        this.username = '';
         this.score = 0;
         this.comment = '';
       });

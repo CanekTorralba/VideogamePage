@@ -2,7 +2,7 @@
   <ion-toolbar color="primary">
     <!-- Logo of the game -->
     <ion-avatar slot="start">
-      <ion-img src="assets\images\Game_Logo.PNG"></ion-img>
+      <ion-img src="assets\images\Game_Logo.PNG" routerLink="/home"></ion-img>
     </ion-avatar>
     <!-- Title of the game -->
     <ion-title>
@@ -10,7 +10,7 @@
     </ion-title>
     <!-- <ion-button>PLAY ME!</ion-button> -->
     <ion-buttons slot="end">
-      <ion-button bgcolor="secondary">
+      <ion-button bgcolor="secondary" href="https://drive.google.com/file/d/17juCk8n5utJI0byPw8hCjNfi6dBNAFA1/view?usp=sharing">
         <b>PLAY ME!</b>
       </ion-button>
     </ion-buttons>
@@ -20,17 +20,17 @@
 <ion-content>
   <h1>Score our work from 1 to 10 to know how we can improve</h1>
   <ion-list>
-    <ion-item>
-      <ion-label position="floating">Team ID</ion-label>
-      <ion-input type="text" [(ngModel)]="teamId"></ion-input>
+    <ion-item class="reviewForm">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="reviewForm">
       <ion-label position="floating">Score</ion-label>
       <ion-input type="number" min="0" max="10" [(ngModel)]="score"></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="reviewForm">
       <ion-label position="floating">Comment</ion-label>
       <ion-textarea [(ngModel)]="comment"></ion-textarea>
     </ion-item>
@@ -39,9 +39,9 @@
   <ion-button expand="block" (click)="saveReview()">Save Review</ion-button>
 
   <ion-list *ngIf="reviews.length > 0">
-    <ion-item *ngFor="let review of reviews">
-      <ion-label>{{ review.teamId }} - {{ review.score }}</ion-label>
-      <ion-note slot="end">{{ review.comment }}</ion-note>
+    <ion-item *ngFor="let review of reviews" class="comment">
+      <ion-label><b>{{ review.username }}</b> - {{ review.score }}</ion-label>
+      <ion-text slot="end">{{ review.comment }}</ion-text>
     </ion-item>
   </ion-list>
 
